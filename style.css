@@ -1,9 +1,10 @@
+/*el tipo de letra*/
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron&display=swap');
 
 body{
     font-family: 'Orbitron', sans-serif;
 }
-#contenedor{
+#contenedor{    
  
     background-color: aquamarine;
     width: 1000px;
@@ -13,19 +14,25 @@ body{
     position: absolute;
     inset: 0;
     margin: auto;
+    border-radius: 19%;
+  overflow: hidden; 
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
 }
-#calculadora{
-    background: rgb(169, 247, 246);
-    /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
+
+#calculadora {
+    background: rgb(214, 243, 241);
     width: 50%;
     height: 100%;
     float: left;
+    position: relative;
 }
-#titulo{  
-    text-align: center;
-    color: #006ab1;
+/* Cambia el color de fondo al cuadno hacemos ponemos el cursor sobre la calculadora */
+#calculadora:hover {
+    background: rgba(123, 236, 234, 0.5);
+}
 
-}
+
 #detalle{
     background: #e46280;
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
@@ -35,47 +42,78 @@ body{
     color: #f6f5f7;
 }
 .contenido{
-    /* Estas tres lineas van a centrar el contenido verticalmente dentro de cada div */
+    /* Estas tres lineas van a centrar el contenido verticalmente dentro de cada div */  
     position: relative;
     top: 50%;
-    transform: translateY(-70%);
+    transform: translateY(-60%);
     overflow: hidden;
     padding: 40px;
 }
 input {
+    transform: translateY(100%);
 	width: 60%;
     padding: 12px 15px;
     border: none;
     background-color: #f7f7f7;
 }
-
+/*detalles para nuestro boton que cuando lo oprimamos cambiara de tamanho y de color cuando este el cursor encima de este*/
 button {
-    margin: 20px;
-  font-size: 15px;
+    margin-top: 80px;
+    font-size: 15px;
 	font-weight: bold;
 	padding: 12px 45px;
 	border-radius: 30px;
 	background-color: #ef567a;
-	border: 1px solid #582833;
+	border-radius: 6px solid #582833;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	transition: transform 20ms ease-in;
+	transition: all 0.2s ease;
+    border-radius: 10px;
+  overflow: hidden; 
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+}
+button:active {
+	transform: scale(1.10);
+}
+button:hover{
+    background-color: #a30323
 }
 
-button:active {
-	transform: scale(0.95);
-}
+
+/*como se va a ver cuando de error*/
 #error{
+    margin-top: 100px;
     color: red;
     font-weight: bold;
     display: none;
 }
 
+/*titulo de nuestra pagina = calculadora basal*/
+#titulo{  
+    text-align: center;
+    color: #04304b;
+
+}
+/*para el titulo y sombra  de Calculadora Basal*/
+#titulo h1 {
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: red;
+    font-size: 50px; /* Ajusta este valor para cambiar el tamaño del texto */
+    text-shadow: 10px 8px 13px rgba(3, 29, 99, 0.5);
+}
+
+
+/*muestra los resultados subrayados*/
 .resultado{
-    color: #0A81D1;
+    color: #025a94;
     font-weight: bold;
     font-size: 25px;
+    transform: translateY(150%);
     margin-bottom: 5px;
     display: none;
+    text-decoration: underline;
+    text-decoration-color: rgb(231, 167, 161);
 }

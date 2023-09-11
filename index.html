@@ -4,9 +4,10 @@
 	<head>
         <title>Calculadora de hidratación</title>
         <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" defer> </script>
         <style>
             body {
-                background-color: rgb(226, 204, 234);
+                background-color: rgb(235, 218, 241);
             }
         </style>
     </head>
@@ -21,10 +22,12 @@
                     <h1>Hidratación Basal</h1>
                     <p class="item">Completa todos los datos</p>
                     <input class ="item" id="peso" type="number" placeholder="Peso en kg" style="color: rgb(230, 13, 13);"  />
-                    <p class="item" id="error">* Debe completar todos los datos</p>
+                    <p class="item" id="error">* El valor ingresado no es valido</p>
                     <button class="item" id="calcular">Calcular</button>
                     <p class="item resultado" id="flu">71cc/h</p>
                     <p class="item resultado" id="man">m+m/2 : 105cc/h</p>
+                    <p class="item resultado" id="man1">1500cc</p>
+                    <p class="item resultado" id="man2">2000cc</p>
                 </div>
             </div>
             <div id="detalle">
