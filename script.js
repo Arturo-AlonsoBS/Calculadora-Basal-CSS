@@ -4,12 +4,14 @@ const FLU = document.getElementById('flu');//para el flujo
 const MAN = document.getElementById('man');//para el mantenimiento
 const MAN1= document.getElementById('man1');//para el sc de 1500
 const MAN2 = document.getElementById('man2');//para el sc de 2000
+const sonido = new Audio('click.mp3');
 
 
 //cuando el usuario presione el boton se realizara los calculos dependiendo del peso ingresado
 CALCULAR.addEventListener('click', () => {
     const DATO = document.getElementById('peso').value
     console.log('dato ingresado: ', DATO)
+    sonido.play();
        //validamos que se cargue un dato:
        //lo siguiente es para resetear los resultados
        FLU.innerHTML = '';
